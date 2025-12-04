@@ -1,0 +1,39 @@
+model:
+  name: "Qwen/Qwen2.5-1.5B-Instruct"
+  trust_remote_code: true
+  use_cache: false
+
+training:
+  output_dir: "./checkpoints"
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4
+  learning_rate: 2.0e-5
+  num_train_epochs: 3
+  logging_steps: 10
+  save_steps: 100
+  eval_steps: 100
+  warmup_ratio: 0.03
+  bf16: true
+  max_seq_length: 2048
+  gradient_checkpointing: true
+  ddp_find_unused_parameters: false
+  report_to: "wandb"
+
+data:
+  language: "de"
+  dataset_names:
+    - "deepset/germanquad"
+    - "germeval_14" 
+    - "xnli"
+  # Note: These will be loaded via the euroeval cache or HF hub
+  # The path is resolved dynamically from berz-path.md
+  cache_dir_env_var: "HF_DATASETS_CACHE"
+
+berzelius:
+  project_id: "berzelius-aiics-real" # Placeholder, user should update
+  num_nodes: 1
+  gpus_per_node: 4
+  time_limit: "04:00:00"
+  partition: "gpu"
+
