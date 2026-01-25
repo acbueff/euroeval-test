@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "created": "2025-12-05T15:42:21.683738",
+    "language": "sv",
+    "description": "GRPO training checkpoint evaluation on Swedish EuroEval validation set",
+    "last_updated": "2025-12-20T21:00:00.000000",
+    "baseline_model": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1"
+  },
+  "runs": {
+    "uniform": {
+      "name": "GRPO Uniform Sampling",
+      "description": "Standard GRPO training with uniform task sampling",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints",
+      "color": "#3A86FF",
+      "linestyle": "-",
+      "evaluations": {
+        "0": {
+          "iteration": 0,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1",
+          "timestamp": "2025-12-05T17:00:00.000000",
+          "status": "completed",
+          "is_baseline": true,
+          "description": "CPT Epoch 1 - Baseline before GRPO training (validation set)",
+          "scores": {
+            "swerec": {"value": 73.1701491549664, "se": 4.4402031328935765, "metric": "test_mcc"},
+            "scala-sv": {"value": 25.248967820797425, "se": 9.614350242091648, "metric": "test_mcc"},
+            "suc3": {"value": 42.72506892180961, "se": 5.647027457514732, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 56.11482102111614, "se": 5.409497386798607, "metric": "test_f1"},
+            "mmlu-sv": {"value": 44.39129684122692, "se": 0.4991103088195407, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 24.72051082190793, "se": 4.136343135884612, "metric": "test_mcc"}
+          },
+          "aggregate_score": 44.39513576363741
+        },
+        "100": {
+          "iteration": 100,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_100",
+          "timestamp": "2025-12-09T14:31:38.950048",
+          "status": "completed",
+          "scores": {
+            "swerec": {"value": 73.21226402977058, "se": 2.69751445209609, "metric": "test_mcc"},
+            "scala-sv": {"value": 28.72530582366739, "se": 14.16053095107525, "metric": "test_mcc"},
+            "suc3": {"value": 40.53063746568057, "se": 1.428634129433123, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 56.82029477407675, "se": 1.5215185243791027, "metric": "test_f1"},
+            "mmlu-sv": {"value": 43.29368200545208, "se": 4.415968243505043, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 25.749413997312505, "se": 2.470090456720152, "metric": "test_mcc"}
+          },
+          "aggregate_score": 44.72193301599331
+        },
+        "200": {
+          "iteration": 200,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_200",
+          "timestamp": "2025-12-09T14:31:38.950064",
+          "status": "completed",
+          "scores": {
+            "swerec": {"value": 74.07607330726856, "se": 3.1728382748827597, "metric": "test_mcc"},
+            "scala-sv": {"value": 29.026956591901875, "se": 20.885480182383183, "metric": "test_mcc"},
+            "suc3": {"value": 43.2242551025613, "se": 0.3862903471840446, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 57.62699981481907, "se": 2.857636176621441, "metric": "test_f1"},
+            "mmlu-sv": {"value": 41.792662089367624, "se": 2.4369781654966203, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 23.519140747517643, "se": 4.46637029576326, "metric": "test_mcc"}
+          },
+          "aggregate_score": 44.877681275572684
+        },
+        "300": {
+          "iteration": 300,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_300",
+          "timestamp": "2025-12-09T14:31:38.950072",
+          "status": "completed",
+          "scores": {
+            "swerec": {"value": 73.60293458884902, "se": 4.661231860674608, "metric": "test_mcc"},
+            "scala-sv": {"value": 36.49115012804756, "se": 8.18581506969965, "metric": "test_mcc"},
+            "suc3": {"value": 42.359607661341066, "se": 2.3200594296857906, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 56.83678504119944, "se": 3.513660595991079, "metric": "test_f1"},
+            "mmlu-sv": {"value": 42.494141363885255, "se": 6.5483041074945945, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 30.19958431263004, "se": 3.9419249506573544, "metric": "test_mcc"}
+          },
+          "aggregate_score": 46.997367182658735
+        },
+        "400": {
+          "iteration": 400,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_400",
+          "timestamp": "2025-12-09T14:31:38.950079",
+          "status": "completed",
+          "scores": {
+            "swerec": {"value": 72.60703777031546, "se": 3.9341423659827117, "metric": "test_mcc"},
+            "scala-sv": {"value": 26.04460626542462, "se": 5.271443084419201, "metric": "test_mcc"},
+            "suc3": {"value": 43.55941856584963, "se": 1.2299961640703743, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 58.393014167287994, "se": 3.933426778564558, "metric": "test_f1"},
+            "mmlu-sv": {"value": 43.31373719222389, "se": 7.066090962540668, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 26.441807331171812, "se": 5.299238838915155, "metric": "test_mcc"}
+          },
+          "aggregate_score": 45.05993688204557
+        },
+        "500": {
+          "iteration": 500,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_500",
+          "timestamp": "2025-12-09T14:31:38.950086",
+          "status": "completed",
+          "scores": {
+            "swerec": {"value": 72.98898291532583, "se": 2.8196959487402475, "metric": "test_mcc"},
+            "scala-sv": {"value": 28.493893192010038, "se": 5.19391544938724, "metric": "test_mcc"},
+            "suc3": {"value": 39.978370017452875, "se": 1.3980359114095113, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 56.42945737087439, "se": 2.917450684397187, "metric": "test_f1"},
+            "mmlu-sv": {"value": 45.319132028332405, "se": 4.4836687770103945, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 26.63596999763068, "se": 5.238926274470288, "metric": "test_mcc"}
+          },
+          "aggregate_score": 44.97430092027104
+        },
+        "600": {
+          "iteration": 600,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_600",
+          "timestamp": "2025-12-09T14:31:38.950093",
+          "status": "completed",
+          "scores": {
+            "swerec": {"value": 74.19501520678892, "se": 4.929253224672911, "metric": "test_mcc"},
+            "scala-sv": {"value": 30.835913409229576, "se": 5.476578254149271, "metric": "test_mcc"},
+            "suc3": {"value": 40.27851543205348, "se": 2.247655965797788, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 56.95900497907456, "se": 1.4232202442519701, "metric": "test_f1"},
+            "mmlu-sv": {"value": 43.815183157544084, "se": 6.1281792279082445, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 28.639679856933668, "se": 2.403439746261654, "metric": "test_mcc"}
+          },
+          "aggregate_score": 45.78721867360405
+        }
+      }
+    },
+    "power_sampling": {
+      "name": "GRPO Power Sampling",
+      "description": "GRPO training with power-based task sampling (branches from iter 300)",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_infer_power",
+      "branch_point": 300,
+      "color": "#E63946",
+      "linestyle": "--",
+      "evaluations": {
+        "350": {
+          "iteration": 350,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_infer_power/rolling_checkpoint",
+          "timestamp": "2025-12-20T20:53:45.000000",
+          "status": "completed",
+          "description": "Power sampling checkpoint at iteration 350",
+          "scores": {
+            "swerec": {"value": 73.94739447331587, "se": 4.700318784575354, "metric": "test_mcc"},
+            "scala-sv": {"value": 26.071677328605297, "se": 15.028436207990067, "metric": "test_mcc"},
+            "suc3": {"value": 41.2394751485684, "se": 1.9864705004176353, "metric": "test_micro_f1_no_misc"},
+            "scandiqa-sv": {"value": 56.97012969483699, "se": 1.8657624176375749, "metric": "test_f1"},
+            "mmlu-sv": {"value": 45.46858624145839, "se": 5.147343929456911, "metric": "test_mcc"},
+            "hellaswag-sv": {"value": 24.350990510986286, "se": 3.823220538906532, "metric": "test_mcc"}
+          },
+          "aggregate_score": 44.67470889962887
+        }
+      }
+    }
+  }
+}

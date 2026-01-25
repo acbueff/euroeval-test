@@ -1,0 +1,999 @@
+{
+  "metadata": {
+    "created": "2025-01-01T14:00:00.000000",
+    "experiment_name": "GRPO Training Variants Comparison",
+    "language": "sv",
+    "description": "Comparing GRPO training variants: Baseline*, RTO loss, CDG, and Adaptive Power",
+    "last_updated": "2026-01-09T12:39:25.279383"
+  },
+  "runs": {
+    "qwen_base": {
+      "name": "Qwen Base (No Training)",
+      "description": "Original Qwen model before any GRPO training - CPT Epoch 1",
+      "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1",
+      "color": "#888888",
+      "linestyle": ":",
+      "marker": "s",
+      "evaluations": {
+        "0": {
+          "iteration": 0,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1",
+          "timestamp": "2025-12-05T17:00:00.000000",
+          "status": "completed",
+          "is_baseline": true,
+          "description": "CPT Epoch 1 - Baseline before GRPO training (validation set)",
+          "scores": {
+            "swerec": {
+              "value": 73.1701491549664,
+              "se": 4.4402031328935765,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 25.248967820797425,
+              "se": 9.614350242091648,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 42.72506892180961,
+              "se": 5.647027457514732,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.11482102111614,
+              "se": 5.409497386798607,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 44.39129684122692,
+              "se": 0.4991103088195407,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 24.72051082190793,
+              "se": 4.136343135884612,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.39513576363741
+        }
+      }
+    },
+    "baseline_star": {
+      "name": "GRPO Baseline*",
+      "description": "New implementation of standard GRPO training (Dec 31 training run)",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints",
+      "color": "#3A86FF",
+      "linestyle": "-",
+      "marker": "o",
+      "evaluations": {
+        "100": {
+          "iteration": 100,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_100",
+          "timestamp": "2026-01-02T20:21:50.701688",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 73.21226402977058,
+              "se": 2.69751445209609,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 28.72530582366739,
+              "se": 14.16053095107525,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.53063746568057,
+              "se": 1.428634129433123,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.82029477407675,
+              "se": 1.5215185243791027,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.29368200545208,
+              "se": 4.415968243505043,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 25.749413997312505,
+              "se": 2.470090456720152,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.72193301599331
+        },
+        "200": {
+          "iteration": 200,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_200",
+          "timestamp": "2026-01-02T20:21:50.701736",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.07607330726856,
+              "se": 3.1728382748827597,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 29.026956591901875,
+              "se": 20.885480182383183,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 43.2242551025613,
+              "se": 0.3862903471840446,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 57.62699981481907,
+              "se": 2.857636176621441,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 41.792662089367624,
+              "se": 2.4369781654966203,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 23.519140747517643,
+              "se": 4.46637029576326,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.877681275572684
+        },
+        "300": {
+          "iteration": 300,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_300",
+          "timestamp": "2026-01-02T20:21:50.701774",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 73.60293458884902,
+              "se": 4.661231860674608,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 36.49115012804756,
+              "se": 8.18581506969965,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 42.359607661341066,
+              "se": 2.3200594296857906,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.83678504119944,
+              "se": 3.513660595991079,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 42.494141363885255,
+              "se": 6.5483041074945945,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 30.19958431263004,
+              "se": 3.9419249506573544,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 46.997367182658735
+        },
+        "400": {
+          "iteration": 400,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_400",
+          "timestamp": "2026-01-04T01:00:07.844383",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 72.60703777031546,
+              "se": 3.9341423659827117,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 26.04460626542462,
+              "se": 5.271443084419201,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 43.55941856584963,
+              "se": 1.2299961640703743,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 58.393014167287994,
+              "se": 3.933426778564558,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.31373719222389,
+              "se": 7.066090962540668,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 26.441807331171812,
+              "se": 5.299238838915155,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.05993688204557
+        },
+        "500": {
+          "iteration": 500,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_500",
+          "timestamp": "2026-01-04T01:00:07.844435",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 72.98898291532583,
+              "se": 2.8196959487402475,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 28.493893192010038,
+              "se": 5.19391544938724,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 39.978370017452875,
+              "se": 1.3980359114095113,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.42945737087439,
+              "se": 2.917450684397187,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 45.319132028332405,
+              "se": 4.4836687770103945,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 26.63596999763068,
+              "se": 5.238926274470288,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.97430092027104
+        },
+        "600": {
+          "iteration": 600,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_600",
+          "timestamp": "2026-01-04T01:00:07.844472",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.19501520678892,
+              "se": 4.929253224672911,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 30.835913409229576,
+              "se": 5.476578254149271,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.27851543205348,
+              "se": 2.247655965797788,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.95900497907456,
+              "se": 1.4232202442519701,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.815183157544084,
+              "se": 6.1281792279082445,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 28.639679856933668,
+              "se": 2.403439746261654,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.78721867360405
+        },
+        "700": {
+          "iteration": 700,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_700",
+          "timestamp": "2026-01-07T13:07:00.817325",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.73174207207222,
+              "se": 6.408515062672279,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 33.7845532451874,
+              "se": 0.7825735295861916,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.057219222542614,
+              "se": 1.7126308027024393,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 57.60563136146583,
+              "se": 2.063816117826494,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.06636373419377,
+              "se": 6.177957508783118,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 21.367221030072596,
+              "se": 5.232228666777577,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.102121777589076
+        },
+        "800": {
+          "iteration": 800,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_800",
+          "timestamp": "2026-01-07T13:07:00.817387",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 75.40303640154114,
+              "se": 5.788477520198708,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 15.521759304110894,
+              "se": 11.79841490029132,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.99887798773192,
+              "se": 3.3863901087745245,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.171965260839535,
+              "se": 0.39402670563197634,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 41.7653654699319,
+              "se": 4.224961790514206,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 22.27287271601088,
+              "se": 2.7484011686415846,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 41.85564619002771
+        },
+        "900": {
+          "iteration": 900,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_900",
+          "timestamp": "2026-01-07T13:07:00.817434",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.30533845237748,
+              "se": 5.394743743252338,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 27.247019292512853,
+              "se": 3.687538128639529,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.76100843229853,
+              "se": 3.991075242758836,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.17165346983999,
+              "se": 2.2017254645781335,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 45.11366940471929,
+              "se": 3.878991555511909,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 22.646988360275476,
+              "se": 0.9804192667610295,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.20761290200394
+        }
+      }
+    },
+    "rto": {
+      "name": "GRPO + RTO Loss",
+      "description": "GRPO training with RTO (Reward-Then-Optimize) loss",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_loss_rto/eval_checkpoints",
+      "color": "#E63946",
+      "linestyle": "--",
+      "marker": "^",
+      "evaluations": {
+        "100": {
+          "iteration": 100,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_loss_rto/eval_checkpoints/iter_100",
+          "timestamp": "2026-01-02T16:58:56.184199",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 73.68608687226738,
+              "se": 6.390708210298237,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 27.10409443887796,
+              "se": 10.573816356430282,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 43.54416306059426,
+              "se": 2.412570235640503,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 57.50386067695229,
+              "se": 3.1481726282483415,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.12960894391538,
+              "se": 8.368023825850536,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 27.890731340589763,
+              "se": 2.0292300274804767,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.476424222199505
+        },
+        "200": {
+          "iteration": 200,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_loss_rto/eval_checkpoints/iter_200",
+          "timestamp": "2026-01-02T16:58:56.184239",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 73.10849587831144,
+              "se": 6.0864766301587405,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 27.912496352257634,
+              "se": 15.745996788365355,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.966429724259726,
+              "se": 2.398629927520192,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.40869070150342,
+              "se": 2.6542193729475336,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 45.22483397581522,
+              "se": 5.740640519772569,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 25.802103778206416,
+              "se": 0.815806225301249,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.90384173505897
+        },
+        "300": {
+          "iteration": 300,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_loss_rto/eval_checkpoints/iter_300",
+          "timestamp": "2026-01-02T16:58:56.184274",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 72.28723451627769,
+              "se": 3.890854925317565,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 35.24068541712143,
+              "se": 14.065457014914246,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 38.904791814789235,
+              "se": 1.2136006999577171,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.502285595991566,
+              "se": 4.851866193228759,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 40.586252139748446,
+              "se": 3.1064059222409792,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 26.546741714808263,
+              "se": 5.127381483257403,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.01133186645611
+        }
+      }
+    },
+    "cdg": {
+      "name": "GRPO + CDG",
+      "description": "GRPO training with CDG (Curriculum-Driven Generation)",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_train_cdg/eval_checkpoints",
+      "color": "#2A9D8F",
+      "linestyle": "-.",
+      "marker": "D",
+      "evaluations": {
+        "100": {
+          "iteration": 100,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_train_cdg/eval_checkpoints/iter_100",
+          "timestamp": "2026-01-02T20:21:50.701809",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.257934220658,
+              "se": 3.5760928850438383,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 30.249060560093326,
+              "se": 8.246757382093753,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.59266396190753,
+              "se": 3.887439367661547,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.504859901790894,
+              "se": 2.706006661853093,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 44.73245622402751,
+              "se": 3.4540669814639338,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 24.430372669807486,
+              "se": 6.741425697325614,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.12789125638079
+        },
+        "200": {
+          "iteration": 200,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_train_cdg/eval_checkpoints/iter_200",
+          "timestamp": "2026-01-02T20:21:50.701842",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.46279597795966,
+              "se": 3.184970374033458,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 28.396998618669283,
+              "se": 11.568995137784576,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 42.3552486246302,
+              "se": 0.9094132145186099,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.59694508254944,
+              "se": 3.862225328630328,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.89575689360892,
+              "se": 5.31502675295947,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 22.972701484766233,
+              "se": 1.5943288996458904,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.61340778036396
+        },
+        "300": {
+          "iteration": 300,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_train_cdg/eval_checkpoints/iter_300",
+          "timestamp": "2026-01-02T20:21:50.701875",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.58534541201261,
+              "se": 3.201700616737619,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 29.96670044483723,
+              "se": 7.317149747925942,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.83791906402201,
+              "se": 2.4449982797892593,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.15702152894945,
+              "se": 2.626770028519781,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 45.430643900230045,
+              "se": 4.121118260394924,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 24.421699637465373,
+              "se": 3.5390644955988595,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.233221664586125
+        }
+      }
+    },
+    "adp_pwr": {
+      "name": "GRPO + adp-pwr",
+      "description": "GRPO training with Adaptive Power sampling (NeurIPS experiment)",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power",
+      "color": "#9B59B6",
+      "linestyle": "-.",
+      "marker": "P",
+      "evaluations": {
+        "200": {
+          "iteration": 200,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/best_model",
+          "timestamp": "2026-01-08T13:46:41.463464",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.42556371023841,
+              "se": 3.9385617123189083,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 29.15868479396082,
+              "se": 6.965471882852768,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.48370715037382,
+              "se": 4.637566874248459,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.92308529629535,
+              "se": 4.234882685678922,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 41.646178084297794,
+              "se": 1.62046261868264,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 19.122161632146106,
+              "se": 1.3167992561914275,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 43.459896777885376
+        },
+        "300": {
+          "iteration": 300,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/final_model",
+          "timestamp": "2026-01-08T13:46:41.463517",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 73.8794562073413,
+              "se": 4.753519574910971,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 29.217150936722753,
+              "se": 12.95506848831389,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 42.10806887682344,
+              "se": 3.6525339483598187,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 57.37113424646109,
+              "se": 0.4637437954061689,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 46.6266715426401,
+              "se": 8.423031319841662,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 27.778479152256132,
+              "se": 4.566923478882122,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 46.16349349370747
+        },
+        "400": {
+          "iteration": 400,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/eval_checkpoints/iter_400",
+          "timestamp": "2026-01-09T12:39:25.279112",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 72.2211216122825,
+              "se": 3.4859356611429346,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 31.053308033332534,
+              "se": 4.382928275451203,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 41.96367682729771,
+              "se": 0.4235056613279393,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.10751663181035,
+              "se": 2.286765752949606,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 48.438051067549324,
+              "se": 8.586986820118383,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 24.282884694336758,
+              "se": 0.6736938076487098,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 45.67775981110153
+        },
+        "500": {
+          "iteration": 500,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/eval_checkpoints/iter_500",
+          "timestamp": "2026-01-09T12:39:25.279181",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 71.9654261228993,
+              "se": 4.703299297633219,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 30.489760221286726,
+              "se": 7.1174924680668346,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 39.337731929936474,
+              "se": 3.2520432611064054,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.74479082295662,
+              "se": 1.4394604625639336,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 43.91406121932636,
+              "se": 8.660056220936564,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 18.61895407935741,
+              "se": 5.137386909799761,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 43.34512073262715
+        },
+        "600": {
+          "iteration": 600,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/eval_checkpoints/iter_600",
+          "timestamp": "2026-01-09T12:39:25.279234",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.05029892063638,
+              "se": 5.246762314693728,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 16.893950808108745,
+              "se": 5.528027554280607,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 41.5005506596026,
+              "se": 2.353634558607335,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.74445277245633,
+              "se": 4.176974231591723,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 46.93538883890276,
+              "se": 7.758671686922422,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 25.051203847722135,
+              "se": 5.687852792907222,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 43.36264097457149
+        },
+        "700": {
+          "iteration": 700,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/eval_checkpoints/iter_700",
+          "timestamp": "2026-01-09T12:39:25.279286",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 70.16184208096993,
+              "se": 3.7518993193063372,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 25.645028063756058,
+              "se": 11.626725588151848,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 39.67530411974856,
+              "se": 2.4694272244643276,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 58.00794635026583,
+              "se": 2.152334863785853,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 42.047976553835085,
+              "se": 4.769787253135177,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 20.67963694111845,
+              "se": 8.893655806913008,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 42.70295568494899
+        },
+        "800": {
+          "iteration": 800,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/eval_checkpoints/iter_800",
+          "timestamp": "2026-01-09T12:39:25.279332",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 74.33623104316905,
+              "se": 6.7910939716584435,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 27.0038790532581,
+              "se": 13.818296276082187,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 40.35209222433398,
+              "se": 2.5014989536840817,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 56.5009482882618,
+              "se": 3.414739811920914,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 45.22010257105784,
+              "se": 7.829166579562462,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 21.466817039400272,
+              "se": 6.90600384152881,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 44.14667836991351
+        },
+        "900": {
+          "iteration": 900,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power/eval_checkpoints/iter_900",
+          "timestamp": "2026-01-09T12:39:25.279380",
+          "status": "completed",
+          "scores": {
+            "swerec": {
+              "value": 72.3603906781848,
+              "se": 5.1474995964494745,
+              "metric": "test_mcc"
+            },
+            "scala-sv": {
+              "value": 27.17764468506449,
+              "se": 4.859969540954352,
+              "metric": "test_mcc"
+            },
+            "suc3": {
+              "value": 42.11032325298722,
+              "se": 0.5414646381417841,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "scandiqa-sv": {
+              "value": 55.144234118743064,
+              "se": 4.481180913136353,
+              "metric": "test_f1"
+            },
+            "mmlu-sv": {
+              "value": 45.94542057058176,
+              "se": 2.6768901686672413,
+              "metric": "test_mcc"
+            },
+            "hellaswag-sv": {
+              "value": 20.297679783696534,
+              "se": 8.16329973756294,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 43.839282181542984
+        }
+      }
+    }
+  }
+}

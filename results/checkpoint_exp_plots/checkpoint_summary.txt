@@ -1,0 +1,162 @@
+GRPO Checkpoint Training Progress Summary
+============================================================
+Generated: 2026-01-09 12:39:29
+
+Configuration:
+  Language: sv
+  Evaluation Set: Validation
+
+============================================================
+Run: Qwen Base (No Training)
+============================================================
+  Description: Original Qwen model before any GRPO training - CPT Epoch 1
+  Checkpoint Dir: 
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 1
+  Iteration Range: 0 - 0
+
+Aggregate Score:
+  First (iter 0): 44.40
+  Latest (iter 0): 44.40
+  Best (iter 0): 44.40
+  Mean: 44.40
+  Std Dev: 0.00
+
+Progress:
+  Improvement (Latest vs First): +0.00
+  Best Improvement: +0.00
+
+Per-Dataset Scores at Best Iteration (iter 0):
+  SweRec (Sentiment): 73.17
+  ScaLA-SV (Ling.): 25.25
+  SUC3 (NER): 42.73
+  ScandiQA (Reading): 56.11
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 44.39
+  HellaSwag (Reason): 24.72
+
+============================================================
+Run: GRPO Baseline*
+============================================================
+  Description: New implementation of standard GRPO training (Dec 31 training run)
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 9
+  Iteration Range: 100 - 900
+
+Aggregate Score:
+  First (iter 100): 44.72
+  Latest (iter 900): 44.21
+  Best (iter 300): 47.00
+  Mean: 44.84
+  Std Dev: 1.29
+
+Progress:
+  Improvement (Latest vs First): -0.51
+  Best Improvement: +2.28
+
+Per-Dataset Scores at Best Iteration (iter 300):
+  SweRec (Sentiment): 73.60
+  ScaLA-SV (Ling.): 36.49
+  SUC3 (NER): 42.36
+  ScandiQA (Reading): 56.84
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 42.49
+  HellaSwag (Reason): 30.20
+
+============================================================
+Run: GRPO + RTO Loss
+============================================================
+  Description: GRPO training with RTO (Reward-Then-Optimize) loss
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_loss_rto/eval_checkpoints
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 3
+  Iteration Range: 100 - 300
+
+Aggregate Score:
+  First (iter 100): 45.48
+  Latest (iter 300): 45.01
+  Best (iter 100): 45.48
+  Mean: 45.13
+  Std Dev: 0.25
+
+Progress:
+  Improvement (Latest vs First): -0.47
+  Best Improvement: +0.00
+
+Per-Dataset Scores at Best Iteration (iter 100):
+  SweRec (Sentiment): 73.69
+  ScaLA-SV (Ling.): 27.10
+  SUC3 (NER): 43.54
+  ScandiQA (Reading): 57.50
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 43.13
+  HellaSwag (Reason): 27.89
+
+============================================================
+Run: GRPO + CDG
+============================================================
+  Description: GRPO training with CDG (Curriculum-Driven Generation)
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_train_cdg/eval_checkpoints
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 3
+  Iteration Range: 100 - 300
+
+Aggregate Score:
+  First (iter 100): 45.13
+  Latest (iter 300): 45.23
+  Best (iter 300): 45.23
+  Mean: 44.99
+  Std Dev: 0.27
+
+Progress:
+  Improvement (Latest vs First): +0.11
+  Best Improvement: +0.11
+
+Per-Dataset Scores at Best Iteration (iter 300):
+  SweRec (Sentiment): 74.59
+  ScaLA-SV (Ling.): 29.97
+  SUC3 (NER): 40.84
+  ScandiQA (Reading): 56.16
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 45.43
+  HellaSwag (Reason): 24.42
+
+============================================================
+Run: GRPO + adp-pwr
+============================================================
+  Description: GRPO training with Adaptive Power sampling (NeurIPS experiment)
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_neurips_adaptive_power
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 8
+  Iteration Range: 200 - 900
+
+Aggregate Score:
+  First (iter 200): 43.46
+  Latest (iter 900): 43.84
+  Best (iter 300): 46.16
+  Mean: 44.09
+  Std Dev: 1.13
+
+Progress:
+  Improvement (Latest vs First): +0.38
+  Best Improvement: +2.70
+
+Per-Dataset Scores at Best Iteration (iter 300):
+  SweRec (Sentiment): 73.88
+  ScaLA-SV (Ling.): 29.22
+  SUC3 (NER): 42.11
+  ScandiQA (Reading): 57.37
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 46.63
+  HellaSwag (Reason): 27.78

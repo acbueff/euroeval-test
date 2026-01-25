@@ -1,0 +1,80 @@
+{
+"400": {
+    "iteration": 400,
+    "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_400",
+    "timestamp": "2025-12-06T17:32:09.715980",
+    "status": "completed",
+    "scores": {
+      "swerec": {
+        "value": 73.42415922809211,
+        "se": 2.465784123209336,
+        "metric": "test_mcc"
+      },
+      "scala-sv": {
+        "value": 22.537782998735064,
+        "se": 11.032967895275359,
+        "metric": "test_mcc"
+      },
+      "suc3": {
+        "value": 42.18068776926451,
+        "se": 0.09651307592609815,
+        "metric": "test_micro_f1_no_misc"
+      },
+      "scandiqa-sv": {
+        "value": 57.733705108272346,
+        "se": 3.687694475982678,
+        "metric": "test_f1"
+      },
+      "mmlu-sv": {
+        "value": 41.72389910372008,
+        "se": 6.798374640476798,
+        "metric": "test_mcc"
+      },
+      "hellaswag-sv": {
+        "value": 22.913227627755365,
+        "se": 2.6419576316602766,
+        "metric": "test_mcc"
+      }
+    },
+    "aggregate_score": 43.41891030597324
+  },
+  "500": {
+    "iteration": 500,
+    "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_500",
+    "timestamp": "2025-12-06T17:32:09.715986",
+    "status": "completed",
+    "scores": {
+      "swerec": {
+        "value": 73.24747451670041,
+        "se": 2.988947180024614,
+        "metric": "test_mcc"
+      },
+      "scala-sv": {
+        "value": 22.414820218940047,
+        "se": 8.829347161185732,
+        "metric": "test_mcc"
+      },
+      "suc3": {
+        "value": 42.30349588450974,
+        "se": 1.1827846319954596,
+        "metric": "test_micro_f1_no_misc"
+      },
+      "scandiqa-sv": {
+        "value": 56.136990416352866,
+        "se": 3.745396281750148,
+        "metric": "test_f1"
+      },
+      "mmlu-sv": {
+        "value": 42.38175595664768,
+        "se": 8.10781013000293,
+        "metric": "test_mcc"
+      },
+      "hellaswag-sv": {
+        "value": 23.56694577370874,
+        "se": 11.169714547900929,
+        "metric": "test_mcc"
+      }
+    },
+    "aggregate_score": 43.341913794476575
+  }
+}

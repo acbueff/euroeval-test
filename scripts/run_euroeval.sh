@@ -85,7 +85,7 @@ apptainer exec --nv \
     --model "$MODEL" \
     --language "$LANGUAGE" \
     --cache-dir "$CACHE_DIR" \
-    --evaluate-test-split \
+    --evaluate-val-split \
     --trust-remote-code \
     --save-results \
     --num-iterations 3 \

@@ -1,0 +1,69 @@
+GRPO Checkpoint Training Progress Summary
+============================================================
+Generated: 2025-12-20 21:00:18
+
+Configuration:
+  Language: sv
+  Evaluation Set: Validation
+
+============================================================
+Run: GRPO Uniform Sampling
+============================================================
+  Description: Standard GRPO training with uniform task sampling
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 7
+  Iteration Range: 0 - 600
+
+Aggregate Score:
+  First (iter 0): 44.40
+  Latest (iter 600): 45.79
+  Best (iter 300): 47.00
+  Mean: 45.26
+  Std Dev: 0.81
+
+Progress:
+  Improvement (Latest vs First): +1.39
+  Best Improvement: +2.60
+
+Per-Dataset Scores at Best Iteration (iter 300):
+  SweRec (Sentiment): 73.60
+  ScaLA-SV (Ling.): 36.49
+  SUC3 (NER): 42.36
+  ScandiQA (Reading): 56.84
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 42.49
+  HellaSwag (Reason): 30.20
+
+============================================================
+Run: GRPO Power Sampling
+============================================================
+  Description: GRPO training with power-based task sampling (branches from iter 300)
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data/exp_checkpoints/exp_infer_power
+  Branch Point: 300
+
+Evaluation Statistics:
+  Total Checkpoints: 1
+  Iteration Range: 350 - 350
+
+Aggregate Score:
+  First (iter 350): 44.67
+  Latest (iter 350): 44.67
+  Best (iter 350): 44.67
+  Mean: 44.67
+  Std Dev: 0.00
+
+Progress:
+  Improvement (Latest vs First): +0.00
+  Best Improvement: +0.00
+
+Per-Dataset Scores at Best Iteration (iter 350):
+  SweRec (Sentiment): 73.95
+  ScaLA-SV (Ling.): 26.07
+  SUC3 (NER): 41.24
+  ScandiQA (Reading): 56.97
+  SweDN (Summary): N/A
+  MMLU-SV (Knowledge): 45.47
+  HellaSwag (Reason): 24.35
