@@ -1,0 +1,37 @@
+GRPO Icelandic Checkpoint Training Progress Summary
+============================================================
+Generated: 2026-02-05 17:35:38
+
+Configuration:
+  Language: is
+  Evaluation Set: Validation
+
+============================================================
+Run: GRPO Icelandic Training
+============================================================
+  Description: GRPO training optimized for Icelandic language performance
+  Checkpoint Dir: /proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints
+  Branch Point: None
+
+Evaluation Statistics:
+  Total Checkpoints: 7
+  Iteration Range: 0 - 600
+
+Aggregate Score:
+  First (iter 0): 14.79
+  Latest (iter 600): 13.56
+  Best (iter 0): 14.79
+  Mean: 13.60
+  Std Dev: 0.68
+
+Progress:
+  Improvement (Latest vs First): -1.23
+  Best Improvement: +0.00
+
+Per-Dataset Scores at Best Iteration (iter 0):
+  Sentiment (MCC): 7.24
+  ScaLA-IS (Ling.): 10.61
+  MIM-GOLD (NER): 8.29
+  NQiI (Reading): 34.38
+  IS-Knowledge: 8.66
+  WinoGrande-IS: 19.55

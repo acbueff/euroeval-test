@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "created": "2026-02-04T19:42:24.021155",
+    "language": "is",
+    "description": "Icelandic EuroEval validation set evaluation - Baseline Qwen3",
+    "model": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1"
+  },
+  "scores": {
+    "hotter-and-colder-sentiment": {
+      "value": 7.240250583049729,
+      "se": 11.960753545685233,
+      "metric": "test_mcc"
+    },
+    "scala-is": {
+      "value": 10.606877066536532,
+      "se": 2.1831186435789425,
+      "metric": "test_mcc"
+    },
+    "mim-gold-ner": {
+      "value": 8.286335120545967,
+      "se": 1.511996813274633,
+      "metric": "test_micro_f1_no_misc"
+    },
+    "nqii": {
+      "value": 34.38247876501276,
+      "se": 3.5537054775424513,
+      "metric": "test_f1"
+    },
+    "icelandic-knowledge": {
+      "value": 8.656609624628683,
+      "se": 5.004484960854201,
+      "metric": "test_mcc"
+    },
+    "winogrande-is": {
+      "value": 19.5473256819535,
+      "se": 9.233815712351054,
+      "metric": "test_mcc"
+    }
+  },
+  "all_datasets": [
+    "hotter-and-colder-sentiment",
+    "scala-is",
+    "mim-gold-ner",
+    "nqii",
+    "icelandic-knowledge",
+    "winogrande-is"
+  ],
+  "aggregate_score": 14.786646140287862
+}

@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "created": "2026-02-05T10:00:00.000000",
+    "experiment_name": "GRPO Icelandic Training Progress",
+    "language": "is",
+    "description": "Comparing GRPO training progress on Icelandic EuroEval validation set",
+    "last_updated": "2026-02-05T17:35:33.631219",
+    "baseline_model": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1"
+  },
+  "runs": {
+    "icelandic_grpo": {
+      "name": "GRPO Icelandic Training",
+      "description": "GRPO training optimized for Icelandic language performance",
+      "checkpoint_base_dir": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints",
+      "color": "#3A86FF",
+      "linestyle": "-",
+      "evaluations": {
+        "0": {
+          "iteration": 0,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1",
+          "timestamp": "2026-02-04T19:42:24.021155",
+          "status": "completed",
+          "is_baseline": true,
+          "description": "Baseline Qwen3 before GRPO Icelandic training (validation set)",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 7.240250583049729,
+              "se": 11.960753545685233,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 10.606877066536532,
+              "se": 2.1831186435789425,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 8.286335120545967,
+              "se": 1.511996813274633,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 34.38247876501276,
+              "se": 3.5537054775424513,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 8.656609624628683,
+              "se": 5.004484960854201,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 19.5473256819535,
+              "se": 9.233815712351054,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 14.786646140287862
+        },
+        "100": {
+          "iteration": 100,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints/iter_100",
+          "timestamp": "2026-02-05T17:35:33.630889",
+          "status": "completed",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 12.366768222783586,
+              "se": 14.072469224128916,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 1.4557919400584198,
+              "se": 2.023513616233358,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 10.172125090525947,
+              "se": 2.9250225391679137,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 34.7684408556217,
+              "se": 4.936198506507622,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 6.028590157652236,
+              "se": 2.311869498605226,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 11.596172793308671,
+              "se": 3.148306039169761,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 12.731314843325093
+        },
+        "200": {
+          "iteration": 200,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints/iter_200",
+          "timestamp": "2026-02-05T17:35:33.630959",
+          "status": "completed",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 14.555159044121794,
+              "se": 0.5326382081051605,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 5.942575255717212,
+              "se": 9.923205052141029,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 10.609874616520095,
+              "se": 1.1336797803042928,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 35.06984682991478,
+              "se": 3.299171553297198,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 7.404430513319987,
+              "se": 2.5177615571580834,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 5.940587227544391,
+              "se": 12.55363337035019,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 13.25374558118971
+        },
+        "300": {
+          "iteration": 300,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints/iter_300",
+          "timestamp": "2026-02-05T17:35:33.631023",
+          "status": "completed",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 16.250262872191065,
+              "se": 9.005287103565685,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 4.063278451630553,
+              "se": 7.645255136604906,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 10.22886595569351,
+              "se": 2.8524345819275823,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 34.575194050405194,
+              "se": 3.0772638323678394,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 10.275887451228504,
+              "se": 2.366984214195999,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 10.687368515560092,
+              "se": 8.31932522535321,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 14.346809549451486
+        },
+        "400": {
+          "iteration": 400,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints/iter_400",
+          "timestamp": "2026-02-05T17:35:33.631093",
+          "status": "completed",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 15.841979132447761,
+              "se": 6.0326415366845945,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 4.133507403870256,
+              "se": 6.7008485175600745,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 10.60542493108822,
+              "se": 4.8156083526634745,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 34.50464085231058,
+              "se": 1.5505527035326405,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 8.41945267483506,
+              "se": 2.538859666289521,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 4.38194893679201,
+              "se": 9.808497060550819,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 12.981158988557313
+        },
+        "500": {
+          "iteration": 500,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints/iter_500",
+          "timestamp": "2026-02-05T17:35:33.631153",
+          "status": "completed",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 18.35262049383565,
+              "se": 6.547816802655661,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 10.468889377464349,
+              "se": 3.716419318934202,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 8.976619135100394,
+              "se": 2.031937175728688,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 33.97268580621212,
+              "se": 4.35079307325314,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 5.049759665541872,
+              "se": 9.613391932177722,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 4.6451955008438075,
+              "se": 2.1703525413519933,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 13.577628329833033
+        },
+        "600": {
+          "iteration": 600,
+          "checkpoint_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data_icelandic/self_play_rl_icelandic/eval_checkpoints/iter_600",
+          "timestamp": "2026-02-05T17:35:33.631215",
+          "status": "completed",
+          "scores": {
+            "hotter-and-colder-sentiment": {
+              "value": 17.259585256095438,
+              "se": 3.662431825621831,
+              "metric": "test_mcc"
+            },
+            "scala-is": {
+              "value": 3.9497707182403063,
+              "se": 4.597503703243955,
+              "metric": "test_mcc"
+            },
+            "mim-gold-ner": {
+              "value": 9.790729697554875,
+              "se": 1.08794342374106,
+              "metric": "test_micro_f1_no_misc"
+            },
+            "nqii": {
+              "value": 35.51699210173282,
+              "se": 0.45197280293172937,
+              "metric": "test_f1"
+            },
+            "icelandic-knowledge": {
+              "value": 6.803310512809521,
+              "se": 11.31414430247725,
+              "metric": "test_mcc"
+            },
+            "winogrande-is": {
+              "value": 8.019880727646909,
+              "se": 11.982481012567202,
+              "metric": "test_mcc"
+            }
+          },
+          "aggregate_score": 13.556711502346644
+        }
+      }
+    }
+  }
+}
