@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "created": "2026-02-11T00:00:00.000000",
+    "experiment_name": "Swedish EuroEval TEST SET Evaluation",
+    "language": "sv",
+    "split": "test",
+    "description": "Evaluation of Qwen3 models on Swedish EuroEval TEST set - comparing baseline, trained model, and judge model",
+    "datasets": [
+      "swerec",
+      "scala-sv",
+      "suc3",
+      "scandiqa-sv",
+      "mmlu-sv",
+      "hellaswag-sv"
+    ],
+    "dataset_info": {
+      "swerec": {
+        "display": "SweRec (Sentiment)",
+        "metric": "test_mcc"
+      },
+      "scala-sv": {
+        "display": "ScaLA-SV (Linguistic)",
+        "metric": "test_mcc"
+      },
+      "suc3": {
+        "display": "SUC3 (NER)",
+        "metric": "test_micro_f1_no_misc"
+      },
+      "scandiqa-sv": {
+        "display": "ScandiQA-SV (Reading)",
+        "metric": "test_f1"
+      },
+      "mmlu-sv": {
+        "display": "MMLU-SV (Knowledge)",
+        "metric": "test_mcc"
+      },
+      "hellaswag-sv": {
+        "display": "HellaSwag-SV (Reasoning)",
+        "metric": "test_mcc"
+      }
+    },
+    "last_updated": "2026-02-11T19:42:37.726958"
+  },
+  "models": {
+    "qwen_baseline": {
+      "name": "Qwen3 1.7B Baseline (No Training)",
+      "description": "Base Qwen3 1.7B model before any GRPO training - CPT Epoch 1",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/distillation_swedish/cpt_checkpoint_epoch_1",
+      "model_size": "1.7B",
+      "color": "#888888",
+      "timestamp": "2026-02-11T19:42:37.726839",
+      "status": "completed",
+      "split": "test",
+      "scores": {
+        "swerec": {
+          "value": 73.23876301824272,
+          "se": 1.9815873148087957,
+          "metric": "test_mcc",
+          "display_name": "SweRec (Sentiment)"
+        },
+        "scala-sv": {
+          "value": 22.8973474156156,
+          "se": 2.656918808243597,
+          "metric": "test_mcc",
+          "display_name": "ScaLA-SV (Linguistic)"
+        },
+        "suc3": {
+          "value": 37.558896675533845,
+          "se": 0.972609714983925,
+          "metric": "test_micro_f1_no_misc",
+          "display_name": "SUC3 (NER)"
+        },
+        "scandiqa-sv": {
+          "value": 56.52993528433736,
+          "se": 0.8164800736634912,
+          "metric": "test_f1",
+          "display_name": "ScandiQA-SV (Reading)"
+        },
+        "mmlu-sv": {
+          "value": 45.537205952245955,
+          "se": 1.1368924837320769,
+          "metric": "test_mcc",
+          "display_name": "MMLU-SV (Knowledge)"
+        },
+        "hellaswag-sv": {
+          "value": 23.049026033611295,
+          "se": 2.460293739392317,
+          "metric": "test_mcc",
+          "display_name": "HellaSwag-SV (Reasoning)"
+        }
+      },
+      "aggregate_score": 43.135195729931134,
+      "num_datasets": 6
+    },
+    "grpo_iter_300": {
+      "name": "GRPO Trained iter_300",
+      "description": "Best performing GRPO checkpoint at iteration 300",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_300",
+      "model_size": "1.7B",
+      "color": "#3A86FF",
+      "timestamp": "2026-02-11T19:42:37.726952",
+      "status": "completed",
+      "split": "test",
+      "scores": {
+        "swerec": {
+          "value": 72.80778740407007,
+          "se": 2.194021681231368,
+          "metric": "test_mcc",
+          "display_name": "SweRec (Sentiment)"
+        },
+        "scala-sv": {
+          "value": 24.24487200872049,
+          "se": 3.680745270935172,
+          "metric": "test_mcc",
+          "display_name": "ScaLA-SV (Linguistic)"
+        },
+        "suc3": {
+          "value": 36.255207875171855,
+          "se": 0.7244221710967415,
+          "metric": "test_micro_f1_no_misc",
+          "display_name": "SUC3 (NER)"
+        },
+        "scandiqa-sv": {
+          "value": 56.65285973461565,
+          "se": 0.9030544156406656,
+          "metric": "test_f1",
+          "display_name": "ScandiQA-SV (Reading)"
+        },
+        "mmlu-sv": {
+          "value": 44.47263052095759,
+          "se": 1.3431250553665028,
+          "metric": "test_mcc",
+          "display_name": "MMLU-SV (Knowledge)"
+        },
+        "hellaswag-sv": {
+          "value": 22.096303238745964,
+          "se": 0.54606216054527,
+          "metric": "test_mcc",
+          "display_name": "HellaSwag-SV (Reasoning)"
+        }
+      },
+      "aggregate_score": 42.7549434637136,
+      "num_datasets": 6
+    },
+    "grpo_iter_100": {
+      "name": "GRPO Trained iter_100",
+      "description": "GRPO checkpoint at iteration 100",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_100",
+      "model_size": "1.7B",
+      "color": "#B8D4E3",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_200": {
+      "name": "GRPO Trained iter_200",
+      "description": "GRPO checkpoint at iteration 200",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_200",
+      "model_size": "1.7B",
+      "color": "#8FBDD9",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_400": {
+      "name": "GRPO Trained iter_400",
+      "description": "GRPO checkpoint at iteration 400",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_400",
+      "model_size": "1.7B",
+      "color": "#2A7ABF",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_500": {
+      "name": "GRPO Trained iter_500",
+      "description": "GRPO checkpoint at iteration 500",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_500",
+      "model_size": "1.7B",
+      "color": "#1E6DAD",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_600": {
+      "name": "GRPO Trained iter_600",
+      "description": "GRPO checkpoint at iteration 600",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_600",
+      "model_size": "1.7B",
+      "color": "#155E9A",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_700": {
+      "name": "GRPO Trained iter_700",
+      "description": "GRPO checkpoint at iteration 700",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_700",
+      "model_size": "1.7B",
+      "color": "#0D4F87",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_800": {
+      "name": "GRPO Trained iter_800",
+      "description": "GRPO checkpoint at iteration 800",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_800",
+      "model_size": "1.7B",
+      "color": "#074074",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "grpo_iter_900": {
+      "name": "GRPO Trained iter_900",
+      "description": "GRPO checkpoint at iteration 900",
+      "model_path": "/proj/berzelius-aiics-real/users/x_anbue/frodi_data/self_play_rl_swedish/eval_checkpoints/iter_900",
+      "model_size": "1.7B",
+      "color": "#023161",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    },
+    "qwen3_32b_judge": {
+      "name": "Qwen3-32B Judge/Teacher Model",
+      "description": "Large Qwen3-32B model used as judge/teacher for distillation and GRPO training",
+      "model_path": "Qwen/Qwen3-32B",
+      "model_size": "32B",
+      "color": "#E63946",
+      "status": "pending",
+      "split": "test",
+      "scores": {},
+      "aggregate_score": null,
+      "num_datasets": 0
+    }
+  }
+}
